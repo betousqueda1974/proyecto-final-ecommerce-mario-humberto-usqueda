@@ -1,0 +1,161 @@
+header, footer{
+  padding: 0.2em 0.2em;
+  background-color:dodgerblue;
+  color: white;
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+li a {
+  text-decoration: none;
+  color:white;
+}
+
+.containerform form{
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  }
+
+.containerform form input,
+.containerform form textarea{
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  border-color: dodgerblue;
+  width: 90%;
+}
+
+.containerform form label{
+  align-items:self-start;
+}
+
+button{
+  margin-bottom: 5px;
+  width: 30%;
+  height: 30px;
+  background:rgb(116, 187, 253);
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+
+button:hover {
+  background-color: #534ed5; 
+  color: white; 
+}
+
+@media screen and (min-width: 768px) {
+  .contenedor{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-template-areas:
+      "titulo titulo"
+      "formulario formulario"
+      "ubicacion ubicacion";
+  }
+
+  .contenedor > .titulodescp{
+    grid-area: titulo;
+  }
+
+  .contenedor > iframe{
+    grid-area: ubicacion;
+  }
+
+  .containerform{
+    grid-area: formulario;
+  }
+    
+  .containerform form{
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+   }
+  
+  .containerform form input,
+  .containerform form textarea{
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    border-color: dodgerblue;
+    width: 90%;
+  }
+  
+  .containerform form label{
+    align-items:self-start;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contenedor{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    grid-template-areas:
+      "titulo formulario"
+      "ubicacion formulario";
+  }
+
+  .contenedor > .titulodescp{
+    grid-area: titulo;
+  }
+
+  .contenedor > iframe{
+    grid-area: ubicacion;
+  }
+
+  .containerform{
+    grid-area: formulario;
+  }
+
+  .containerform form{
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+  }
+
+  .containerform form input,
+  .containerform form textarea{
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    border-color: dodgerblue;
+    width: 90%;
+  }
+
+  .containerform form label{
+    align-items:self-start;
+  }
+}
+
+footer{
+  display: flex;
+  justify-content:space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
