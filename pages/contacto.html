@@ -27,6 +27,8 @@
 
   </header>
 
+  <main>
+
     <div class="contenedor">
       <div class="titulodescp">
         <h2>Contáctanos</h2>
@@ -39,20 +41,22 @@
       <div class="containerform">
         <form action="https://formsubmit.co/betousqueda@gmail.com" method="post">
           <label for="nombre">Nombre</label>
-          <input type="text" name="firstname" placeholder="Nombre" id="nombre" required>
+          <input type="text" name="firstname" placeholder="Nombre" id="nombre">
           <label for="apellido">Apellido</label>
-          <input type="text" name="lastname" placeholder="Apellido" id="apellido" required>
+          <input type="text" name="lastname" placeholder="Apellido" id="apellido">
           <label for="telefono">Teléfono</label>
-          <input type="text" name="phone" placeholder="Teléfono" id="telefono" required>
+          <input type="text" name="phone" placeholder="Teléfono" id="telefono">
           <label for="email">Correo</label>
-          <input type="email" name="correo" placeholder="Email" id="email" required>
+          <input type="email" name="correo" placeholder="Email" id="email">
           <label for="consulta">Consulta</label>
-          <textarea name="cons" id="consulta" placeholder="Consulta" required></textarea>
+          <textarea name="cons" id="consulta" placeholder="Consulta"></textarea>
           <button type="submit">Enviar</button>
-
+          <h3 class="mensajevalidar"></h3>
         </form>
       </div>
     </div>
+
+  </main>
 
   <footer>
     <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
@@ -61,5 +65,6 @@
     <a href="https://www.linkedin.com" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
   </footer>
 
+  <script src="../js/contacto.js"></script>
 </body>
 </html>
