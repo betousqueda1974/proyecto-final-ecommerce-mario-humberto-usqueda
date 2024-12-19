@@ -1,0 +1,107 @@
+header, footer{
+  padding: 0.2em 0.2em;
+  background-color:dodgerblue;
+  color: white;
+  font-family: "Roboto", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+li {
+  list-style: none;
+  display: inline-block;
+}
+
+li a {
+  text-decoration: none;
+  color:white;
+}
+
+/* .carrito {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  justify-content: space-evenly;
+  gap: 1em 1em;
+  padding: 0.5em 0.5em;
+} */
+
+
+
+
+
+
+/* 
+.carrito{
+  display: grid;
+  grid-template-columns: 40fr 10fr 20fr 20fr;
+  align-items: start;
+  grid-template-areas:
+    "nombre cantidad precio subtotal";
+    border: solid 2px red;
+}
+
+.carrito > .detalle > .nombreprod{
+  grid-area: nombre;
+  text-align: justify;
+  position: relative;
+  border: solid 2px blue;
+}
+
+.carrito > .detalle > .cantidadprod{
+  grid-area: cantidad;
+  text-align: justify;
+  position: relative;
+  border: solid 2px green;
+}
+
+.carrito > .detalle > .precioprod{
+  grid-area: precio;
+  text-align: justify;
+  position: relative;
+  border: solid 2px grey;
+}
+
+.carrito > .detalle > .subtotalprod{
+  grid-area: subtotal;
+  text-align: justify;
+  position: relative;
+  border: solid 2px yellow;
+} */
+
+
+
+
+
+
+/* 
+.contenedor > .descriphora{
+  grid-area: detallehora;
+  text-align: justify;
+}
+
+.contenedor > iframe{
+  grid-area: ubicacion;
+  margin-bottom: 2px;
+}
+
+.contenedor > .contenedorimg{
+  grid-area: horarioscole;
+  margin-top: 15px;
+}
+ */
+
+
+
+
+
+
+
+
+
+
+footer{
+  display: flex;
+  justify-content:space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

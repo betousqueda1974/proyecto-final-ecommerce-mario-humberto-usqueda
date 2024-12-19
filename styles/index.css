@@ -54,9 +54,10 @@ img{
   height: 12em;
 }
 
-.tituloarticulo{
+.tituloarticulo, h4{
   text-align: center;
   color:black;
+  margin: auto;
 }
 
 .btn{
