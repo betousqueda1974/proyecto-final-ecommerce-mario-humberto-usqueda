@@ -1,27 +1,26 @@
 carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-// console.log(carrito);
+let v_subtotal;
+var v_total = 0;
 
 const items = document.querySelector(".items");
 
 items.innerHTML = "";
 
 carrito.forEach((item) => {
+  let v_subtotal = item.cantidad * item.price;
+  v_total = v_total + v_subtotal;
   const html = `
         <tr data-id="${item.id}">
             <td>${item.title}</td>
             <td>${item.cantidad}</td>
             <td>$ ${item.price}</td>
+            <td>$ ${v_subtotal}</td>
         </tr>
     `;
   
-  /* 
-  const html = `
-    <h3>${item.nombre}</h3>
-    <h3>${item.cantidad}</h3>
-    <h3>$ ${item.precio}</h3>
-    <h3>4</h3>
-    `; */
-  
   items.innerHTML += html;
 });
+
+const total = document.querySelector(".total");
+total.innerHTML = "Total: $" + v_total;

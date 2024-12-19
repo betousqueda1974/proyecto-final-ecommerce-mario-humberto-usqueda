@@ -1,46 +1,3 @@
-//let v_contador = 0;
-/* 
-// Los productos en un array de objetos
-const productos = [
-  {
-    id: 1,
-    nombre: "Producto 1",
-    //descripcion: "Descripción Producto 1",
-    //imagen: "imagen-1.jpg",
-    precio: 10,
-    //stock: 1,
-  },
-  {
-    id: 2,
-    nombre: "Producto 2",
-    //descripcion: "Descripción Producto 2",
-    //imagen: "imagen-2.jpg",
-    precio: 20,
-    //stock: 10,
-  },
-  {
-    id: 3,
-    nombre: "Producto 3",
-    //descripcion: "Descripción Producto 3",
-    //imagen: "imagen-3.jpg",
-    precio: 30,
-    //stock: 80,
-  },
-  {
-    id: 4,
-    nombre: "Producto 4",
-    //descripcion: "Descripción Producto 4",
-    //imagen: "imagen-4.jpg",
-    precio: 50,
-    //stock: 10,
-  },
-];
-
- */
-
-
-
-
 // Obtengo el item 'carrito' del local storage que es un texto
 // Lo intento transformar a un Objeto de javaScript
 // Si algo falla asigno un array a la constante, sino el Objeto
@@ -66,7 +23,9 @@ fetch("../json/productos.json")
               <img src="../img/${post.image}" alt="${post.title}">
             </figure>
             <h4>$ ${post.price}</h4>
-            <button type="submit" class="btn">Agregar</button>
+            <button type="button" class="btnA">Agregar</button>
+            <button type="button" class="btnQ">Quitar</button>
+            <button type="button" class="btnE">Eliminar</button>
           </div>
         </article>
         `;
@@ -81,8 +40,9 @@ fetch("../json/productos.json")
 
 // Escucho todos los eventos click el documento
 document.addEventListener("click", (event) => {
-  // Si el elemento donde se hizo click contiene la clase 'btn'
-  if (event.target.classList.contains("btn")) {
+  
+  // Si el elemento donde se hizo click contiene la clase 'btnA' de AGREGAR
+  if (event.target.classList.contains("btnA")) {
     // Busco el contenedor mas cercano que sea un 'article'
     // Obtengo el id del atributo data-id
     const id = event.target.closest("article").dataset.id;
@@ -113,4 +73,51 @@ document.addEventListener("click", (event) => {
     // Guardo en el localStorage el array carrito en formato JSON
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
+
+
+  // Si el elemento donde se hizo click contiene la clase 'btnQ' de QUITAR
+  if (event.target.classList.contains("btnQ")) {
+    // Busco el contenedor mas cercano que sea un 'article'
+    // Obtengo el id del atributo data-id
+    const id = event.target.closest("article").dataset.id;
+
+    //Busco si ese producto ya existe en el carrito
+    const index = carrito.findIndex((item) => item.id == id);
+
+    //Si es -1 quiere decir que NO existe
+    if (index != -1)
+    {
+      const producto1 = carrito[index];
+
+      if (producto1.cantidad > 1)
+      {
+        const producto = carrito[index];
+        producto.cantidad--;
+      }
+    }
+    // Guardo en el localStorage el array carrito en formato JSON
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  }
+
+
+   // Si el elemento donde se hizo click contiene la clase 'btnE' de ELIMINAR
+   if (event.target.classList.contains("btnE")) {
+    // Busco el contenedor mas cercano que sea un 'article'
+    // Obtengo el id del atributo data-id
+    const id = event.target.closest("article").dataset.id;
+
+    //Busco si ese producto ya existe en el carrito
+    const index = carrito.findIndex((item) => item.id == id);
+
+    //Si es -1 quiere decir que NO existe
+    if (index != -1)
+    {
+      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+      carrito = carrito.filter(function (producto) {
+        return producto.id !== id;
+      });
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+     }
+  }
+
 });

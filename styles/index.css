@@ -60,10 +60,10 @@ img{
   margin: auto;
 }
 
-.btn{
-  margin-bottom: 10px;
-  margin-left: 70px;
-  width: 50%;
+.btnA, .btnQ, .btnE{
+  /* margin-bottom: 10px;
+  margin-left: 70px; */
+  width: 25%;
   height: 25px;
   background:rgb(116, 187, 253);
   border: none;
@@ -74,7 +74,7 @@ img{
   font-weight: 400;
 }
 
-.btn:hover {
+.btnA:hover, .btnQ:hover, .btnE:hover {
   background-color: #534ed5; 
   color: white; 
 }
