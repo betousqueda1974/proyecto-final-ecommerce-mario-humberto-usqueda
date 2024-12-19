@@ -20,7 +20,7 @@ fetch("../json/productos.json")
           <div>
             <h2 class="tituloarticulo">${post.title}</h2>
             <figure>
-              <img src="./img/${post.image}" alt="${post.title}">
+              <img src="img/${post.image}" alt="${post.title}">
             </figure>
             <h4>$ ${post.price}</h4>
             <button type="button" class="btnA">Agregar</button>
