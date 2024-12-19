@@ -6,7 +6,7 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let v_producto;
 
 //ACA HAY QUE HACER EL FETCH PARA TRAER INFO DE LA API
-fetch("../json/productos.json")
+fetch("./json/productos.json")
   .then ((response) => response.json())
   .then ((posts) => {
     v_producto = posts;
@@ -20,7 +20,7 @@ fetch("../json/productos.json")
           <div>
             <h2 class="tituloarticulo">${post.title}</h2>
             <figure>
-              <img src="img/${post.image}" alt="${post.title}">
+              <img src="./img/${post.image}" alt="${post.title}">
             </figure>
             <h4>$ ${post.price}</h4>
             <button type="button" class="btnA">Agregar</button>
