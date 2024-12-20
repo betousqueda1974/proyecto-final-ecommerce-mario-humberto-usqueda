@@ -24,8 +24,6 @@ fetch("./json/productos.json")
             </figure>
             <h4>$ ${post.price}</h4>
             <button type="button" class="btnA">Agregar</button>
-            <button type="button" class="btnQ">Quitar</button>
-            <button type="button" class="btnE">Eliminar</button>
           </div>
         </article>
         `;
@@ -73,51 +71,4 @@ document.addEventListener("click", (event) => {
     // Guardo en el localStorage el array carrito en formato JSON
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
-
-
-  // Si el elemento donde se hizo click contiene la clase 'btnQ' de QUITAR
-  if (event.target.classList.contains("btnQ")) {
-    // Busco el contenedor mas cercano que sea un 'article'
-    // Obtengo el id del atributo data-id
-    const id = event.target.closest("article").dataset.id;
-
-    //Busco si ese producto ya existe en el carrito
-    const index = carrito.findIndex((item) => item.id == id);
-
-    //Si es -1 quiere decir que NO existe
-    if (index != -1)
-    {
-      const producto1 = carrito[index];
-
-      if (producto1.cantidad > 1)
-      {
-        const producto = carrito[index];
-        producto.cantidad--;
-      }
-    }
-    // Guardo en el localStorage el array carrito en formato JSON
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-  }
-
-
-   // Si el elemento donde se hizo click contiene la clase 'btnE' de ELIMINAR
-   if (event.target.classList.contains("btnE")) {
-    // Busco el contenedor mas cercano que sea un 'article'
-    // Obtengo el id del atributo data-id
-    const id = event.target.closest("article").dataset.id;
-
-    //Busco si ese producto ya existe en el carrito
-    const index = carrito.findIndex((item) => item.id == id);
-
-    //Si es -1 quiere decir que NO existe
-    if (index != -1)
-    {
-      let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
-      carrito = carrito.filter(function (producto) {
-        return producto.id !== id;
-      });
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-     }
-  }
-
 });
