@@ -61,10 +61,10 @@ img{
 }
 
 .btnA, .btnQ, .btnE{
-  /* margin-bottom: 10px;
-  margin-left: 70px; */
+  margin-bottom: 10px;
+  margin-left: 15px;
   width: 25%;
-  height: 25px;
+  height: 18px;
   background:rgb(116, 187, 253);
   border: none;
   border-radius: 40px;
@@ -72,11 +72,17 @@ img{
   font-size: 14px;
   color: #333;
   font-weight: 400;
+  box-shadow: 0px 4px 0px rgb(20, 52, 90);
 }
 
 .btnA:hover, .btnQ:hover, .btnE:hover {
   background-color: #534ed5; 
-  color: white; 
+  color: white;
+}
+
+.btnA:active, .btnQ:active, .btnE:active{
+  transform: translate(4px);
+  box-shadow: 0px 0px 0px rgb(20, 52, 90);
 }
 
 footer{

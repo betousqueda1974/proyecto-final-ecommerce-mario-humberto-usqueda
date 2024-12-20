@@ -2,7 +2,6 @@ header, footer{
   padding: 0.2em 0.2em;
   background-color:dodgerblue;
   color: white;
-  /* font-family: Georgia, 'Times New Roman', Times, serif; */
   font-family: "Roboto", serif;
   font-weight: 700;
   font-style: normal;
@@ -35,7 +34,6 @@ img {
 .card{
   display: grid;
   grid-template-columns: 0.5fr 1fr;
-  /*grid-template-rows: 0.2fr 1.8fr;*/
   grid-template-rows: 30% 70%;
   border: 2px solid;
   border-radius: 5px;

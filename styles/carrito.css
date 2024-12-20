@@ -17,7 +17,6 @@ li a {
   color:white;
 }
 
-
 h2 {
   background-color:dodgerblue;
   color: white;
@@ -42,14 +41,10 @@ td {
   padding-top: 1em;
 }
 
-
 .total, .cantProd{
   padding-top: 4em;
   background-color: white;
 }
-
-
-
 
 footer{
   display: flex;

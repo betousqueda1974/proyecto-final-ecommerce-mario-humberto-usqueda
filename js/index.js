@@ -5,7 +5,7 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 let v_producto;
 
-//ACA HAY QUE HACER EL FETCH PARA TRAER INFO DE LA API
+//Se realiza fetch para traer la info del Json
 fetch("./json/productos.json")
   .then ((response) => response.json())
   .then ((posts) => {
