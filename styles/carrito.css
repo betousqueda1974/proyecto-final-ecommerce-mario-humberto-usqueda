@@ -17,84 +17,36 @@ li a {
   color:white;
 }
 
-/* .carrito {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  justify-content: space-evenly;
-  gap: 1em 1em;
-  padding: 0.5em 0.5em;
-} */
 
-
-
-
-
-
-/* 
-.carrito{
-  display: grid;
-  grid-template-columns: 40fr 10fr 20fr 20fr;
-  align-items: start;
-  grid-template-areas:
-    "nombre cantidad precio subtotal";
-    border: solid 2px red;
+h2 {
+  background-color:dodgerblue;
+  color: white;
+  text-align: center;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.carrito > .detalle > .nombreprod{
-  grid-area: nombre;
-  text-align: justify;
-  position: relative;
-  border: solid 2px blue;
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.carrito > .detalle > .cantidadprod{
-  grid-area: cantidad;
-  text-align: justify;
-  position: relative;
-  border: solid 2px green;
+thead, tbody{
+  background-color:antiquewhite;
 }
 
-.carrito > .detalle > .precioprod{
-  grid-area: precio;
-  text-align: justify;
-  position: relative;
-  border: solid 2px grey;
+td {
+  text-align: center;
+  border-bottom: 1px solid grey;
+  padding-top: 1em;
 }
 
-.carrito > .detalle > .subtotalprod{
-  grid-area: subtotal;
-  text-align: justify;
-  position: relative;
-  border: solid 2px yellow;
-} */
 
-
-
-
-
-
-/* 
-.contenedor > .descriphora{
-  grid-area: detallehora;
-  text-align: justify;
+.total, .cantProd{
+  padding-top: 4em;
+  background-color: white;
 }
-
-.contenedor > iframe{
-  grid-area: ubicacion;
-  margin-bottom: 2px;
-}
-
-.contenedor > .contenedorimg{
-  grid-area: horarioscole;
-  margin-top: 15px;
-}
- */
-
-
-
-
-
-
 
 
 
